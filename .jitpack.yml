@@ -5,7 +5,7 @@ jdk: openjdk11
 
 install:
   - unset JAVA_TOOL_OPTIONS
-  - jshell --execution local https://bit.ly/make-java
+  - jshell -J-Dproject.name='stratification' --execution local https://bit.ly/make-java
   - JARS="work/main"
   - FILES="-Dfile=$JARS/modules/de.sormuras.stratification-1.0.0-SNAPSHOT.jar -Dsources=$JARS/sources/de.sormuras.stratification-1.0.0-SNAPSHOT-sources.jar -Djavadoc=$JARS/javadoc/stratification-1.0.0-SNAPSHOT-javadoc.jar"
   - find $JARS
